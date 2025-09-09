@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Main colors - Transportation theme */
+    --background: 248 252 255; /* Very light blue-white */
+    --foreground: 16 24 40; /* Deep navy */
+
+    --card: 255 255 255; /* Pure white cards */
+    --card-foreground: 16 24 40;
+
+    --popover: 255 255 255;
+    --popover-foreground: 16 24 40;
+
+    /* School bus yellow as primary */
+    --primary: 50 100% 60%; /* Bright school bus yellow */
+    --primary-foreground: 16 24 40; /* Dark text on yellow */
+    --primary-glow: 50 100% 80%; /* Lighter yellow for effects */
+
+    /* Trust blue as secondary */
+    --secondary: 217 85% 94%; /* Very light blue */
+    --secondary-foreground: 217 85% 20%; /* Dark blue text */
+    --trust-blue: 217 85% 55%; /* Main trust blue */
+    --trust-blue-foreground: 217 85% 98%;
+
+    --muted: 217 85% 96%;
+    --muted-foreground: 217 20% 50%;
+
+    --accent: 217 85% 94%;
+    --accent-foreground: 217 85% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 30% 90%;
+    --input: 217 30% 95%;
+    --ring: 50 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients for transportation theme */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-trust: linear-gradient(135deg, hsl(var(--trust-blue)), hsl(217 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--trust-blue)), hsl(var(--primary)));
+    
+    /* Shadows with primary color */
+    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-trust: 0 10px 30px -10px hsl(var(--trust-blue) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 248 252 255;
+    --sidebar-foreground: 16 24 40;
+    --sidebar-primary: 217 85% 55%;
+    --sidebar-primary-foreground: 217 85% 98%;
+    --sidebar-accent: 217 85% 94%;
+    --sidebar-accent-foreground: 217 85% 20%;
+    --sidebar-border: 217 30% 90%;
+    --sidebar-ring: 50 100% 60%;
+  }
+
+  .dark {
+    --background: 16 24 40; /* Deep navy */
+    --foreground: 248 252 255; /* Light blue-white */
+
+    --card: 22 30 50; /* Darker navy */
+    --card-foreground: 248 252 255;
+
+    --popover: 22 30 50;
+    --popover-foreground: 248 252 255;
+
+    --primary: 50 100% 65%; /* Slightly brighter yellow for dark mode */
+    --primary-foreground: 16 24 40;
+    --primary-glow: 50 100% 85%;
+
+    --secondary: 22 30 50;
+    --secondary-foreground: 217 85% 90%;
+    --trust-blue: 217 85% 70%; /* Brighter blue for dark mode */
+    --trust-blue-foreground: 16 24 40;
+
+    --muted: 22 30 50;
+    --muted-foreground: 217 20% 70%;
+
+    --accent: 22 30 50;
+    --accent-foreground: 217 85% 90%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 22 30 50;
+    --input: 22 30 50;
+    --ring: 50 100% 65%;
+    --sidebar-background: 16 24 40;
+    --sidebar-foreground: 248 252 255;
+    --sidebar-primary: 217 85% 70%;
+    --sidebar-primary-foreground: 16 24 40;
+    --sidebar-accent: 22 30 50;
+    --sidebar-accent-foreground: 217 85% 90%;
+    --sidebar-border: 22 30 50;
+    --sidebar-ring: 50 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
